@@ -1,7 +1,7 @@
 [user]
     name = Jan Sabbe
 {{- if eq .usage "work" }}
-    email = "jan.sabbe@hootsuite.com"
+    email = "{{ onepasswordRead "op://hootsuite/hootsuite/username" | trim }}"
 {{- end }}
 {{- if eq .usage "home" }}
     email = "648689+jansabbe@users.noreply.github.com"
