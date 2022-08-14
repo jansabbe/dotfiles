@@ -1,0 +1,13 @@
+{{ $usage := promptString "usage (home|work):" -}}
+{
+  "edit": {
+    "command": "code",
+    "args": ["--wait"]
+  },
+  "diff": {
+    "pager": "delta"
+  },
+  "data": {
+    "usage": "{{ $usage }}"
+  }
+}

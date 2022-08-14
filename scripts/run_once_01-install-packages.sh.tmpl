@@ -1,0 +1,73 @@
+#!/bin/bash
+
+brew bundle --no-lock --file=/dev/stdin <<EOF
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-drivers"
+tap "buo/cask-upgrade"
+tap "1password/tap"
+
+{{- if eq .usage "work" }}
+tap "hootsuite/homebrew"
+tap "nousefreak/brew"
+{{- end }}
+
+# CLI
+brew "antigen"
+brew "awscli"
+brew "bat"
+brew "colima"
+brew "exa"
+brew "fzf"
+brew "git-delta"
+brew "httpie"
+brew "jq"
+brew "nvm"
+brew "ripgrep"
+cask "1password-cli"
+
+{{- if eq .usage "work" }}
+brew "aws-iam-authenticator"
+brew "direnv"
+brew "hs-deployments"
+brew "hs-opskit"
+brew "kubectx"
+brew "kubernetes-cli"
+brew "NoUseFreak/brew/sops64"
+brew "sops"
+brew "stern"
+brew "vault"
+{{- end }}
+
+# Apps
+cask "1password"
+cask "elgato-camera-hub"
+cask "elgato-control-center"
+cask "firefox"
+cask "google-chrome"
+cask "intellij-idea"
+cask "iterm2"
+cask "launchbar"
+cask "logi-options-plus"
+cask "slack"
+cask "telegram"
+cask "the-unarchiver"
+cask "visual-studio-code"
+
+{{- if eq .usage "home" }}
+cask "dropbox"
+cask "sketch"
+{{- end }}
+
+{{- if eq .usage "work" }}
+cask "figma"
+{{- end }}
+
+
+# Fonts
+cask "font-cascadia-code-pl"
+cask "font-fira-code"
+cask "font-lato"
+cask "font-meslo-lg-nerd-font"
+cask "font-proza-libre"
+
+EOF

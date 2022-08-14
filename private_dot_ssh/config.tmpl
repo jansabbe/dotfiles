@@ -1,0 +1,8 @@
+{{- if eq .usage "work" }}
+Host sc-jumphost jumphost.sparkcentral.ninja
+    Hostname jumphost.sparkcentral.ninja
+    User sparkcentral
+    IdentitiesOnly yes
+{{- end }}
+Host *
+    IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"

@@ -1,0 +1,7 @@
+hash -d repo=~/Repositories
+
+{{- if eq .usage "work" }}
+hash -d hootsuite=~/Repositories/hootsuite
+hash -d deployments=~/Repositories/deployments
+hash -d bitbucket=~/Repositories/bitbucket
+{{- end }}
