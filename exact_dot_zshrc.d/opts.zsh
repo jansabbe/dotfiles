@@ -1,0 +1,1 @@
+unsetopt LIST_BEEP
