@@ -2,6 +2,7 @@
 Host sc-jumphost jumphost.sparkcentral.ninja
     Hostname jumphost.sparkcentral.ninja
     User sparkcentral
+    IdentityFile ~/.ssh/sc-jumphost.pub
     IdentitiesOnly yes
 {{- end }}
 Host *
