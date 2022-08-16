@@ -17,7 +17,7 @@ arch: host
 
 # Container runtime to be used (docker, containerd).
 # Default: docker
-runtime: containerd
+runtime: docker
 
 # Kubernetes configuration for the virtual machine.
 kubernetes:
