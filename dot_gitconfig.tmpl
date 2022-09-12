@@ -3,9 +3,6 @@
 {{- if eq .usage "work" }}
     email = "{{ onepasswordRead "op://hootsuite/hootsuite/username" | trim }}"
 {{- end }}
-{{- if eq .usage "home" }}
-    email = "648689+jansabbe@users.noreply.github.com"
-{{- end }}
 
 [pull]
     rebase = true
@@ -22,3 +19,9 @@
 [delta]
     syntax-theme = zenburn
     line-numbers = true
+
+[includeIf "gitdir:~/Repositories/github/"]
+    path = ~/Repositories/github/.gitconfig
+
+[includeIf "gitdir:~/.local/share/"]
+    path = ~/Repositories/github/.gitconfig
