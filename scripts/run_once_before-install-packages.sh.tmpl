@@ -44,6 +44,10 @@ brew "stern"
 brew "vault"
 {{- end }}
 
+{{- if eq .usage "home" }}
+brew "rustup-init"
+{{- end }}
+
 # Apps
 cask "1password"
 cask "elgato-camera-hub"
