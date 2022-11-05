@@ -4,6 +4,9 @@
     email = "{{ onepasswordRead "op://hootsuite/hootsuite/username" | trim }}"
 {{- end }}
 
+[init]
+    defaultBranch = main
+
 [pull]
     rebase = true
 
