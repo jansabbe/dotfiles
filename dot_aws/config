@@ -1,3 +1,23 @@
 [default]
 region = us-east-1
 
+[profile atrenko-test-admin]
+sso_start_url = https://atrenko.awsapps.com/start
+sso_region = eu-west-1
+sso_account_id = 953497269860
+sso_role_name = AdministratorAccess
+region = eu-west-1
+
+[profile atrenko-prod-admin]
+sso_start_url = https://atrenko.awsapps.com/start
+sso_region = eu-west-1
+sso_account_id = 295194608249
+sso_role_name = AdministratorAccess
+region = eu-west-1
+
+[profile atrenko-shared-admin]
+sso_start_url = https://atrenko.awsapps.com/start
+sso_region = eu-west-1
+sso_account_id = 573623130940
+sso_role_name = AdministratorAccess
+region = eu-west-1
