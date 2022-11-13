@@ -8,15 +8,16 @@ antigen bundle npm
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle lukechilds/zsh-nvm
 antigen bundle sindresorhus/pure@main
+antigen bundle eastokes/aws-plugin-zsh
 # Tell Antigen that you're done.
 antigen apply
 
 # Make lazy loaded .zfunctions available
-fpath=( ~/.zfunctions "${fpath[@]}" )
+fpath=(~/.zfunctions "${fpath[@]}")
 autoload -Uz $fpath[1]/*(.:t)
 
 # Run extra init scripts
-init_files=(~/.zshrc.d/*.zsh) 2> /dev/null
+init_files=(~/.zshrc.d/*.zsh) 2>/dev/null
 for init_file in $init_files; do
   source $init_file
 done
