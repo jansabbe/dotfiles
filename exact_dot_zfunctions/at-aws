@@ -1,0 +1,9 @@
+profile=$1
+
+aws sts get-caller-identity --profile $profile &>/dev/null
+EXIT_CODE="$?" # $? is the exit code of the last statement
+if [ $EXIT_CODE -eq 255 ]; then
+    aws sso login --profile $profile
+fi
+
+asp $profile eu-west-1

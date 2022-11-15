@@ -7,3 +7,10 @@ alias llg='exa -l --git --git-ignore'
 alias sc-token-jansdev="sc-token 0-0177bc5cad9-000-0a6c161d"
 alias sc-token-janstaging="hs-token 13630494"
 {{- end }}
+
+{{- if eq .usage "home" }}
+alias at-aws-root="at-aws atrenko-root-admin"
+alias at-aws-test="at-aws atrenko-test-dev"
+alias at-aws-prod="at-aws atrenko-prod-dev"
+alias at-aws-shared="at-aws atrenko-shared-dev"
+{{- end }}
